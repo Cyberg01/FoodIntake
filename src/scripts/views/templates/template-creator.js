@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config';
 
 const createFoodItemTemplate = (food) => `
   <div class="food-item">
-    <img data-src="${food.image}" class="food-item-image lazyload" alt="${food.title}">   
+    <img src="${food.image}" class="food-item-image" alt="${food.title}">   
     <div class="food-item-info">
       <ul>
           <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
@@ -90,7 +90,7 @@ const createFoodDetailTemplate = (food) => `
     </table>
     </div>
     <div class="food-nutrition-label">
-      <img src="${CONFIG.BASE_URL}recipes/${food.id}/nutritionLabel.png?${CONFIG.API_KEY}" alt="Nutrition Label">
+      <img class="lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/nutritionLabel.png?${CONFIG.API_KEY}" alt="Nutrition Label">
     </div>
     
   </div>
@@ -104,10 +104,10 @@ const createFoodDetailTemplate = (food) => `
         `,
     ).join('')}
     </p>
-    <img class="food-ingredient-image" src="${CONFIG.BASE_URL}recipes/${food.id}/ingredientWidget.png?${CONFIG.API_KEY}" alt="Ingredients">
+    <img class="food-ingredient-image lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/ingredientWidget.png?${CONFIG.API_KEY}" alt="Ingredients">
    
     <h4>Equipments</h4>
-    <img class="food-equipments" src="${CONFIG.BASE_URL}recipes/${food.id}/equipmentWidget.png?${CONFIG.API_KEY}" alt="Equipments">
+    <img class="food-equipments lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/equipmentWidget.png?${CONFIG.API_KEY}" alt="Equipments">
 
     <h4>Instructions</h4>
     <p>${food.analyzedInstructions
@@ -146,7 +146,7 @@ const createSimilarFoodItemTemplate = (food) => `
 const createVideoFoodItemTemplate = (video) => `
   <div class="aside-food-item video-aside">
     <a class="video-food-item" href="https://www.youtube.com/watch?v=${video.youTubeId}" terget="_blank">
-      <img class="video-food-item-thumbnail" src="${video.thumbnail}" alt="${food.shortTitle}">
+      <img class="video-food-item-thumbnail lazyload" data-src="${video.thumbnail}" alt="${food.shortTitle}">
       <div class="video-food-item-content">
         <h5 class="video-food-item-title">${video.shortTitle}</h5>
         <div class="video-food-item-info">
