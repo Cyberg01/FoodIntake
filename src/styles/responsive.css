@@ -29,7 +29,7 @@
     .foods {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
-        row-gap: 16px;        
+        row-gap: 16px;     
     }
 
     .food, .similar-food, .video-similar-food {
@@ -58,7 +58,6 @@
     .food-item-title {
         padding: 10px 15px;
         margin: 0;
-        height: 30px;
     }
 
     .food-item-title a {
@@ -193,6 +192,10 @@
     main .first-main .tagline-img img {
         width: 240px;
         height: 240px;
+    }
+
+    main .second-main {
+        background-image: url('../public/img/background-tagline-why-small.jpg');
     }
 
     main .second-main .tagline-why .img-container img {

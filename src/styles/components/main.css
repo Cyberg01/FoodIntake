@@ -69,7 +69,7 @@ main .second-main {
     display: flex;
     flex-direction: column;
     padding: 64px;
-    background-image: url('../../public/img/background-tagline-why.png');
+    background-image: url('../../public/img/background-tagline-why-large.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;

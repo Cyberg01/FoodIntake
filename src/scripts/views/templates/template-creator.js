@@ -200,7 +200,7 @@ const createSkeletonItemTemplate = (count) => {
       <div class="food-item-info">
         <ul class="skeleton">
           <li>80%</li>
-          <li class="food-item-info-text skeleton">Health</li>
+          <li class="food-item-info-text">Health</li>
         </ul>
         <ul class="food-item-info-mid skeleton">
           <li>
