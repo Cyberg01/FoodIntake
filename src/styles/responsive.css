@@ -227,7 +227,8 @@
 
     footer .first-footer {
         grid-template-columns: 1fr;
-        gap: 32px
+        gap: 32px;
+        padding: 48px 24px;
     }
 
     footer .first-footer .footer-header h1 {

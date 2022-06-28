@@ -43,12 +43,12 @@ const Home = {
     <div class="tagline-heading">
       <h1>Rekomendasi Berdasarkan Tipe Makanan</h1>
     </div>
-      <li><a href="#/foodish"><img class="lazyload" data-src="/img/food type/1.png"></a></li>
-      <li><a href="#/foodish"><img class="lazyload" data-src="/img/food type/2.png"></a></li>
-      <li><a href="#/foodish"><img class="lazyload" data-src="/img/food type/3.png"></a></li>
-      <li><a href="#/foodish"><img class="lazyload" data-src="/img/food type/4.png"></a></li>
-      <li><a href="#/foodish"><img class="lazyload" data-src="/img/food type/5.png"></a></li>
-      <li><a href="#/foodish"><img class="lazyload" data-src="/img/food type/6.png"></a></li>
+      <li><a href="#/foodish"><img data-src="/img/food type/1.png"></a></li>
+      <li><a href="#/foodish"><img data-src="/img/food type/2.png"></a></li>
+      <li><a href="#/foodish"><img data-src="/img/food type/3.png"></a></li>
+      <li><a href="#/foodish"><img data-src="/img/food type/4.png"></a></li>
+      <li><a href="#/foodish"><img data-src="/img/food type/5.png"></a></li>
+      <li><a href="#/foodish"><img data-src="/img/food type/6.png"></a></li>
       <div class="food-type-text">
         <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini.<br>Keep healthy!</p>
       </p>

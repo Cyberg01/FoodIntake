@@ -163,7 +163,6 @@ const createVideoFoodItemTemplate = (video) => `
 const createBookmarkItemTemplate = (food) => `
   <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
-    <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
     <div class="food-item-info">
       <ul>
           <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
@@ -173,7 +172,8 @@ const createBookmarkItemTemplate = (food) => `
         <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
         <li class="food-item-info-text">Servings</li>
       </ul>
-    </div> 
+    </div>
+      <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
       <p class="food-item-summary">${food.summary}</p>
   </div>
 `;
