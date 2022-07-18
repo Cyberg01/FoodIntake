@@ -1,30 +1,31 @@
-/* eslint-disable radix */
 import CONFIG from '../../globals/config';
 
 const createFoodItemTemplate = (food) => `
   <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
-    <div class="food-item-info">
-      <ul>
-          <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
-          <li class="food-item-info-text">Health</li>
-      </ul>
-      <ul class="food-item-info-mid">
-        <li><i class="fa-brands fa-nutritionix icon"></i> 
-            ${food.nutrition.nutrients
+    <div class="food-item-main">
+      <div class="food-item-info">
+        <ul>
+            <li><i class="fa-solid fa-star icon"></i>${food.healthScore}%</li>
+            <li class="food-item-info-text">Healthy</li>
+        </ul>
+        <ul class="food-item-info-mid">
+          <li><i class="fa-brands fa-nutritionix icon"></i> 
+              ${food.nutrition.nutrients
     .filter((nutrient) => nutrient.name === 'Calories')
     .map((nutrient) => `
-                      ${parseInt(nutrient.amount)}
-                  `).join('')}</li>
-        <li class="food-item-info-text">Calories</li> 
-      </ul>
-      <ul>
-        <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
-        <li class="food-item-info-text">Servings</li>
-      </ul>
-    </div>
+                        ${parseInt(nutrient.amount)}
+                    `).join('')}</li>
+          <li class="food-item-info-text">Calories</li> 
+        </ul>
+        <ul>
+          <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
+          <li class="food-item-info-text">Servings</li>
+        </ul>
+      </div> 
       <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
       <p class="food-item-summary">${food.summary}</p>
+    </div>
   </div>
 `;
 
@@ -46,8 +47,8 @@ const createFoodDetailTemplate = (food) => `
     <h4>Food Facts</h4>
     <div class="food-fact-item">
     <div>
-      <li class="food-fact-value">${food.healthScore}</li>
-      <li class="food-fact-title"><i class="fas fa-star-half-alt icon"></i> Health Score</li>
+      <li class="food-fact-value">${food.healthScore}%</li>
+      <li class="food-fact-title"><i class="fa-solid fa-star icon"></i> Health Score</li>
     </div>
     <div>
       <li class="food-fact-value">${food.weightWatcherSmartPoints}</li>
@@ -105,7 +106,7 @@ const createFoodDetailTemplate = (food) => `
     ).join('')}
     </p>
     <img class="food-ingredient-image lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/ingredientWidget.png?${CONFIG.API_KEY}" alt="Ingredients">
-   
+     
     <h4>Equipments</h4>
     <img class="food-equipments lazyload" data-src="${CONFIG.BASE_URL}recipes/${food.id}/equipmentWidget.png?${CONFIG.API_KEY}" alt="Equipments">
 
@@ -146,8 +147,8 @@ const createSimilarFoodItemTemplate = (food) => `
 const createVideoFoodItemTemplate = (video) => `
   <div class="aside-food-item video-aside">
     <a class="video-food-item" href="https://www.youtube.com/watch?v=${video.youTubeId}" terget="_blank">
-      <img class="video-food-item-thumbnail lazyload" data-src="${video.thumbnail}" alt="${food.shortTitle}">
-      <div class="video-food-item-content">
+    <img class="video-food-item-thumbnail lazyload" data-src="${video.thumbnail}" alt="${food.shortTitle}">
+    <div class="video-food-item-content">
         <h5 class="video-food-item-title">${video.shortTitle}</h5>
         <div class="video-food-item-info">
           <ul class="video-food-item-info-icon">
@@ -163,18 +164,20 @@ const createVideoFoodItemTemplate = (video) => `
 const createBookmarkItemTemplate = (food) => `
   <div class="food-item">
     <img src="${food.image}" class="food-item-image" alt="${food.title}">   
+    <div class="food-item-main">
     <div class="food-item-info">
-      <ul>
-          <li><i class="fas fa-star-half-alt icon"></i>${food.healthScore}%</li>
+      <ul class="food-item-info-first">
+          <li><i class="fa-solid fa-star icon"></i> ${food.healthScore}%</li>
           <li class="food-item-info-text">Health</li>
       </ul>
       <ul>
         <li><i class="fas fa-utensils icon"></i> ${food.servings}</li>
         <li class="food-item-info-text">Servings</li>
       </ul>
-    </div>
+    </div> 
       <h5 class="food-item-title"><a href="${`/#/detail/${food.id}`}">${food.title}</a></h5>
       <p class="food-item-summary">${food.summary}</p>
+    </div>
   </div>
 `;
 
@@ -259,10 +262,10 @@ const createSkeletonDetailTemplate = (count) => {
 };
 
 const createSkeletonBookmarkTemplate = (count) => {
-  const template = '';
+  let template = '';
 
   for (let i = 0; i < count; i++) {
-    `
+    template += `
     <div class="food-item">
       <img class="food-item-image lazyload" data-src="./etc/placeholder.png" alt="skeleton">   
     <div class="bookmark-item-info">

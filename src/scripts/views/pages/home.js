@@ -40,9 +40,11 @@ const Home = {
   </section>
 
   <section class="third-main">
-    <div class="tagline-heading">
-      <h1>Rekomendasi Berdasarkan Tipe Makanan</h1>
-    </div>
+  <div class="tagline-heading">
+    <h1>Rekomendasi Berdasarkan<br><span>Tipe Makanan</span></h1>
+    <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini. <br>Keep healthy!</p>
+  </div>
+  <div class="third-main-grid">
       <li>
         <a href="#/foodish">
         <picture>
@@ -61,6 +63,7 @@ const Home = {
         </picture>
         </a>
       </li>
+      
       <li>
         <a href="#/foodish">
         <picture>
@@ -97,10 +100,37 @@ const Home = {
         </picture>
         </a>
       </li>
-      <div class="food-type-text">
-        <p>Food Intake memberikan rekomendasi sesuai tipe makanan untuk menu makanan mu hari ini.<br>Keep healthy!</p>
-      </p>
+     </div>
   </section>
+
+  <section class="fourth-main">
+    <div class="tagline-heading">
+      <h1>Personalisasikan Dengan <br><span>Filter Nutrisi</span></h1>
+      <p>Pastikan kamu memilih makanan sesuai dengan kebutuhan nutrisi ya!</p>
+    </div>
+    <picture>
+                <source media="(max-width: 650px)" srcset="./img/information-small.jpg"/>
+                <img class="lazyload"
+                    data-src='./img/information-large.png' 
+                    alt="Food Information"></img>
+    </picture>    
+  </section>
+
+  <section class="fifth-main">
+    <div class="tagline-heading">
+      <h1>Periksa <span>Label Nutrisi</span></h1>
+      <p>Mungkin sedikit menakutkan untuk mengetahui berapa banyak kalori atau berapa banyak gula dalam makanan favoritmu, 
+      tetapi pastikan kamu memeriksa <span>Label Nutrisi</span> sebelum membuat makanan yang kamu suka.</p>
+    </div>
+    <picture>
+                <source media="(max-width: 650px)" srcset="./img/nutrition-label-small.jpg"/>
+                <img 
+                    class="lazyload"
+                    data-src='./img/nutrition-label-large.jpg' 
+                    alt="Lutrition Label"></img>
+    </picture>    
+  </section>
+
 
   <section class="main-galery">
     <div class="galery-heading">

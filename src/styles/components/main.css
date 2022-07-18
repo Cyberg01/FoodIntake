@@ -1,10 +1,10 @@
 main h1 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Comfortaa', 'Poppins', sans-serif, cursive;
 }
 
 main .first-main {
     display:flex;
-    padding: 64px;
+    padding: 72px 64px;
     margin: 0 auto;
     background-color: #fafafa;
     justify-content: space-evenly;
@@ -41,7 +41,7 @@ main .first-main .tagline button {
     background-color: #5F7161;
     padding: 16px 24px;
     border-radius: 8px;
-    color: white;
+    color: #EFEAD8;
     min-width: 44px;
     min-height: 44px;
     margin-top: 64px;
@@ -73,7 +73,6 @@ main .second-main {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center top;
-    width: 100%;
 }
 
 main .second-main  .tagline-heading {
@@ -127,7 +126,7 @@ main .main-galery{
 
 main .main-galery .galery-heading  h1 {
     font-size: 32px;
-    color: #5F7161;
+    color: #6D8B74;
     margin: 24px;
 }
 
@@ -159,46 +158,121 @@ main .main-galery .galery-grid picture > img {
 }
 
 main .third-main {
-    padding: 50px;
-    background-color: #fff;
+    padding: 50px 80px;
     display: flex;
-    flex-direction: column;
-    margin: 0px auto;
+    background-color: #fff;
     text-align: center;
     align-items: center;
+    background-image: url('../../public/img/background-third-main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
-main .third-main h1 {
+main .third-main .tagline-heading {
+    text-align: left;
+    margin-right: 50px;
+}
+
+main .third-main .tagline-heading h1 {
     font-size: 38px;
     color: #5F7161;
     margin-bottom: 30px;
-    padding: 20px 30px;
+    
 }
 
-main .third-main li {
+main .third-main .tagline-heading h1 span {
+    color: #CC704B;
+}
+
+main .third-main-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0px auto;
+}
+
+main .third-main-grid li {
     list-style: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     margin: 0px auto;
-    margin-bottom: 20px;
-    max-width: 500px; 
+    max-width: 400px; 
     text-align: center;
-    background-color: #D0C9C0;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    background-color: #c2b098;
 }
 
-main .third-main img {
+main .third-main-grid img {
     border-radius: 20px;
     width: 100%;
     object-fit: cover;
     padding: 3px 3px 10px 3px;
 }
 
-main .third-main li:hover {
+main .third-main-grid li:hover {
     background-color:#6D8B74;
 }
 
-main .third-main .food-type-text {
-    margin-top: 30px;
-    font-size: 18px;
+main .fourth-main {
+    padding: 50px 68px;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    background-color: #efe3d2;
+    font-size: 14pt;
 }
+
+main .fourth-main img {
+    width: 100%;
+    object-fit: cover;
+    margin: 0px auto;
+    max-width: 580px; 
+}
+
+main .fourth-main .tagline-heading h1 {
+    font-size: 38px;
+    color: #5F7161;
+    margin-bottom: 30px;
+    
+}
+
+main .fourth-main .tagline-heading h1 span {
+    color: #CC704B;
+}
+
+main .fifth-main {
+    padding: 50px 68px;
+    display: flex;
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    background-color: #efe3d2;
+    font-size: 14pt;
+    background-image: url('../../public/img/background-fifth-main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+main .fifth-main img {
+    height: 100%;
+    object-fit: cover;
+    max-height: 500px; 
+    margin: 30px;
+}
+
+main .fifth-main .tagline-heading h1 {
+    font-size: 38px;
+    color: #5F7161;
+    margin-bottom: 30px;
+    
+}
+
+main .fifth-main span {
+    color: #CC704B;
+}
+

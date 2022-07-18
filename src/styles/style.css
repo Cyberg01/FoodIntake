@@ -3,6 +3,7 @@
 @import url('./components/about.css');
 @import url('./components/foodish.css');
 @import url('./components/detail.css');
+@import url('./components/bookmark.css');
 
 * {
     padding: 0;
@@ -40,7 +41,7 @@ body {
 
 .app-bar__brand img {
     width: 36px;
-    margin-right: 16px;
+    margin-right: 10px;
 }
 
 .app-bar__brand h1 {
@@ -66,15 +67,22 @@ body {
 }
 
 .app-bar .app-bar__brand h1 {
+    font-family: 'Comfortaa', cursive;
     color: black;
-    text-transform: uppercase;
-    font-size: 22px;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-size: 1.5em;
     user-select: none;
+    line-height: 0;
+}
+
+.app-bar .app-bar__brand h1 span {
+    color: #58725e;
 }
 
 .app-bar .app-bar__navigation {
     position: absolute;
-    top: 56px;
+    top: 50px;
     left: -240px;
     width: 240px;
     transition: all 0.3s;
@@ -102,8 +110,8 @@ ul {
 }
 
 .app-bar .app-bar__navigation ul li a:hover {
-    font-weight: 800;
-    color: #6D8B74;
+    /* font-weight: 800; */
+    color: #58725e;
 }
 
 /*

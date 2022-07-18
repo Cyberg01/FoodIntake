@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 class PageInitiator {
   static activePage1(page1, page2, page3) {
     page1.classList.add('active');

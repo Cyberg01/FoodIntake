@@ -1,17 +1,15 @@
 import FavoriteFoodIdb from '../../data/bookmark-food-idb';
-import { createBookmarkItemTemplate, createSkeletonBookmarkTemplate } from '../templates/template-creator';
+import { createBookmarkItemTemplate } from '../templates/template-creator';
 
 const Bookmark = {
   async render() {
     return `
     <div class="bookmark-continer">
       <h2><i class="fa-solid fa-bookmark icon-title"></i> Bookmarked Food</h2>
+      <div class="bookmark-message"></div>
         <div class="food-content bookmark-content">
-          <div id="message" class="food-result-message"></div>
           <div class="food-content-item">
-          <div id="foods" class="foods">
-            ${createSkeletonBookmarkTemplate(8)}
-          </div>
+          <div id="foods" class="foods"></div>
         </div>
     </div>
     `;
@@ -21,7 +19,7 @@ const Bookmark = {
     const foods = await FavoriteFoodIdb.getAllFoods();
     const foodsContainer = document.querySelector('#foods');
     if (foods == 0) {
-      foodsContainer.innerHTML += '<h2>Your Bookmark is Empty</h2>';
+      document.querySelector('.bookmark-message').innerHTML += '<h4>Your Bookmark is Empty!</h4>';
     } else {
       foods.forEach((food) => {
         foodsContainer.innerHTML += createBookmarkItemTemplate(food);
